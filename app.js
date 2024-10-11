@@ -1,10 +1,18 @@
+/* This code sets up a simple two-player Connect Four game in a web browser. */
+
 document.addEventListener('DOMContentLoaded', () => 
+//Event Listener for DOM: This ensures the JavaScript code runs only after the HTML has fully loaded, preventing errors related to trying to access elements that don’t exist yet.
 {
+      //Element Selection
       const squares = document.querySelectorAll(".grid div")
+      //squares: Selects all <div> elements inside an element with the class grid, representing the game board.
       const result = document.querySelector('#result')
+      //result: Selects the element to display the result of the game (who won).
       const displayCurrentPlayer = document.querySelector('#current-player')
+      //displayCurrentPlayer: Selects the element that shows which player's turn it is.
 
       const winningArrays = [
+            // Array of arrays, each representing winning combinations in the game.
             [0, 1, 2, 3],
             [41, 40, 39, 38],
             [7, 8, 9, 10],
@@ -75,9 +83,12 @@ document.addEventListener('DOMContentLoaded', () =>
             [12, 19, 26, 33],
             [13, 20, 27, 34],
       ]
-
+      
       let currentPlayer = 1
+      //Keeps track of which player’s turn it is. Player 1 starts first.
 
+      //Check Board Function
+      //This function checks if any of the winning combinations have been met by either player. If a player wins, it updates the result element with the corresponding message.
       function checkBoard () {
             for (let y = 0; y < winningArrays.length; y++) {
                   const square1 = squares [winningArrays[y][0]]
@@ -108,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () =>
 
 }
 
-
       for (let i = 0; i < squares.length; i++) {
             squares[i].onclick = () => {
-                  // if the suare below your current square is taken, you can go on top of it.
+            //Loops through all squares and adds a click event listener for each:V
                   if (squares[i + 7].classList.contains('taken') &&!squares[i].classList.contains('taken')) {
+                  //// When a square is clicked, it checks if the square directly below it (i + 7) is occupied (i.e., taken) and that the clicked square is not already taken.
                         if (currentPlayer == 1) {
                               squares[i].classList.add('taken')
                               squares[i].classList.add('player-one')
@@ -123,9 +134,12 @@ document.addEventListener('DOMContentLoaded', () =>
                               squares[i].classList.add('player-two')
                               currentPlayer = 1
                               displayCurrentPlayer.innerHTML = currentPlayer
+                              //// When a square is clicked, it checks if the square directly below it (i + 7) is occupied (i.e., taken) and that the clicked square is not already taken.
                         }
                   } else alert ('You cant go here.')
+                  //If a player clicks an invalid square, an alert is shown.
                   checkBoard ()
+                  //After a move, the checkBoard function is called to check for a win.
             }
       }   
 

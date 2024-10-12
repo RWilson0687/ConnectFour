@@ -1,4 +1,4 @@
-/* This code sets up a simple two-player Connect Four game in a web browser. */
+//This code sets up a simple two-player Connect Four game in a web browser.
 
 document.addEventListener('DOMContentLoaded', () => 
 //Event Listener for DOM: This ensures the JavaScript code runs only after the HTML has fully loaded, preventing errors related to trying to access elements that don’t exist yet.

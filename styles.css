@@ -107,6 +107,13 @@ body {
     height: auto;
 }
 
+/* Remove bullet points */
+.navigationPane {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
 /* Styling for list items in the navigation */
 .navigationPane li {
     padding: 10px 20px;
@@ -137,6 +144,7 @@ body {
     color: #ffcc00;
     text-decoration: underline;
 }
+
 
 /* Buttons below the game area */
 #gameButtons {

@@ -6,61 +6,94 @@
     <title>Connect Four</title>
     <link rel="stylesheet" href="styles.css">
     <script src="connectfour.js" charset="UTF-8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h3> The current player is : Player <span id="current-player">1</span></h3>
-    <h3 id="result"></h3>
-    <div class="grid">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
-        <div class="taken"></div>
+    <!-- Title Section -->
+    <div class="page-title">
+        <h1>Connect Four</h1>
     </div>
 
+    <div class="wrapper">
+        <!-- Game Description Section -->
+        <div class="game-description">
+            <h3>Game Description</h3>
+            <p>Connect Four is a two-player connection game in which the players take turns dropping colored discs from the top into a grid. The goal is to get four of your discs in a row either horizontally, vertically, or diagonally.</p>
+        </div>
+
+        <div class="game-container">
+            <h3> The current player is : Player <span id="current-player">1</span></h3>
+            <h3 id="result"></h3>
+            <div class="grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="taken"></div>
+                <div class="taken"></div>
+                <div class="taken"></div>
+                <div class="taken"></div>
+                <div class="taken"></div>
+                <div class="taken"></div>
+                <div class="taken"></div>
+            </div>
+        </div>
+
+        <div id="navigationPane">
+            <h3>
+                <span style="margin-right: 5px;">🎮</span>Other Games<span style="margin-right: 5px;">🎮</span>
+            </h3>
+            <ul class="navigationPane">
+                <li><a href="https://rwilson0687.github.io/Breakout/">Breakout</a></li>
+                <li><a href="https://rwilson0687.github.io/ConnectFour/">Connect Four</a></li>
+                <li><a href="https://rwilson0687.github.io/Frogger/">Frogger</a></li>
+                <li><a href="https://rwilson0687.github.io/MemoryGame/">Memory Game</a></li>
+                <li><a href="https://rwilson0687.github.io/RockPaperScissors/">Rock, Paper, Scissors</a></li>
+                <li><a href="https://rwilson0687.github.io/SpaceInvaders/">Space Invaders</a></li>
+                <li><a href="https://rwilson0687.github.io/Whack-A-Mole/">Whack-A-Mole</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="gameButtons">
+        <button id="restart-button" onclick="refreshPage()">Restart</button>
+    </div>
 </body>
 </html>

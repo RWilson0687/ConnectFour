@@ -9,68 +9,145 @@
     border-radius: 50%;
 }
 
+/* Title Section Styling */
+.page-title {
+    width: 100%; /* Full width of the page */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.page-title h1 {
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    font-size: 48px; /* Large font size for the title */
+    color: rgb(255, 255, 255); /* Black color for the text */
+    text-transform: uppercase; /* Make the title uppercase */
+    margin: 0;
+}
+
 /* Ensure the body takes the full viewport height and centers content */
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align items at the top */
+    justify-content: flex-start;
     align-items: center;
-    background-color: #282c34;
-    font-family: Arial, sans-serif;
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    background: url(BG.jpg);
+    background-attachment: fixed;
+    background-size: cover;
     color: white;
 }
 
-/* Styling for the player display text */
-h3 {
-    text-align: center;
-    font-size: 18px;
-    color: white;
-    margin: 50px 0;
+/* Add a wrapper around the game grid, the description, and the navigation pane */
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Styling for the current player display */
-#current-player {
-    font-weight: bold;
+/* Game description section */
+.game-description {
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* Heading for game description */
+.game-description h3 {
     font-size: 24px;
-    color: yellow; /* Change as needed */
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
 }
 
-/* Game container is centered both horizontally and vertically */
+/* Game description paragraph */
+.game-description p {
+    font-size: 16px;
+    color: white;
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Game container */
 .game-container {
-    position: relative;
-    width: 600px;
-    height: 400px;
+    width: 45%;
+    max-width: 900px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 25px;
-    background-color: black;
-    border: 5px solid white;
+
 }
 
 /* Grid styling */
 .grid {
-    width:  330px;             /* Adjust width of the game grid */
-    height: 265px;            /* Adjust height of the game grid */
-    display: grid;            /* Use CSS grid layout */
-    grid-template-columns: repeat(7, 1fr); /* Example: 7 columns */
-    grid-template-rows: repeat(6, 1fr);    /* Example: 6 rows */
-    gap: 5px;                 /* Space between cells */
-    border: 2px solid white;  /* Border around the grid */
-    background-color: #444;   /* Background color of the grid */
+    width:  330px;
+    height: 265px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 5px;
+    border: 2px solid white;
+    background-color: #444;
 }
 
-/* Individual grid cell styling */
-.grid div {
-    height: 40px;             /* Adjust cell height */
-    width: 40px;              /* Adjust cell width */
-    /*background-color: #ccc;   /* Default background color for cells */
-    /*border: 1px solid #666;   /* Border for each cell */
-    border-radius: 4px;       /* Rounded corners */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+/* Navigation Pane */
+#navigationPane {
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    height: auto;
 }
-.taken div {
-    background-color: transparent;
+
+/* Styling for list items in the navigation */
+.navigationPane li {
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #000000;
+    border-radius: 5px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Hover effect for navigation items */
+.navigationPane li:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Styling for links in the navigation */
+.navigationPane li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Hover effect for links */
+.navigationPane li a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+/* Buttons below the game area */
+#gameButtons {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+}
+
+#gameButtons button {
+    background-color: #f874d0;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive; /* Retro gaming font */
+    padding: 10px 20px;
+    cursor: pointer;
 }

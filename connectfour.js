@@ -144,3 +144,8 @@ document.addEventListener('DOMContentLoaded', () =>
       }   
 
 })
+
+//Function to refresh the page
+function refreshPage() {
+      location.reload(); // Reloads the page
+  }

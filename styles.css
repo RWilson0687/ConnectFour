@@ -145,7 +145,6 @@ body {
     text-decoration: underline;
 }
 
-
 /* Buttons below the game area */
 #gameButtons {
     display: flex;
@@ -158,4 +157,10 @@ body {
     font-family: 'Press Start 2P', cursive; /* Retro gaming font */
     padding: 10px 20px;
     cursor: pointer;
+}
+#navigationPane h3 {
+    text-align: center; /* Centers the text */
+    margin: 0 0 10px 0; /* Adds some spacing below the title */
+    font-size: 1.5rem; /* Adjust font size for better visibility */
+    color: white; /* Ensure consistent color */
 }
